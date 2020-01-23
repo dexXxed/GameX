@@ -1,15 +1,15 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy : MonoBehaviour {
-
+public class Enemy2 : MonoBehaviour
+{
 	public int health = 100;
 
 	public GameObject deathEffect;
 
 
-	public void TakeDamage (int damage)
+	public void TakeDamage(int damage)
 	{
 		health -= damage;
 
@@ -19,11 +19,9 @@ public class Enemy : MonoBehaviour {
 		}
 	}
 
-	void Die ()
+	void Die()
 	{
 		Instantiate(deathEffect, transform.position, Quaternion.identity);
 		Destroy(gameObject);
 	}
-
-
 }

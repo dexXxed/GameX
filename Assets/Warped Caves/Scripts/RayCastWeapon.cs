@@ -29,6 +29,12 @@ public class RayCastWeapon : MonoBehaviour {
 				enemy.TakeDamage(damage);
 			}
 
+			Enemy2 enemy2 = hitInfo.transform.GetComponent<Enemy2>();
+			if (enemy2 != null)
+			{
+				enemy2.TakeDamage(damage);
+			}
+
 			Instantiate(impactEffect, hitInfo.point, Quaternion.identity);
 
 			lineRenderer.SetPosition(0, firePoint.position);
